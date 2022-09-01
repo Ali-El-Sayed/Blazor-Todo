@@ -1,0 +1,8 @@
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.csproj.AssemblyReference.cache
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.AssemblyInfoInputs.cache
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.AssemblyInfo.cs
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.csproj.CoreCompileInputs.cache
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.MvcApplicationPartsAssemblyInfo.cache
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.RazorAssemblyInfo.cache
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\BlazorTodo.RazorAssemblyInfo.cs
