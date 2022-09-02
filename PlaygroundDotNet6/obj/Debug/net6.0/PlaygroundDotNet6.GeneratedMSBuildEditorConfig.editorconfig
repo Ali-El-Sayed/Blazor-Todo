@@ -19,6 +19,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ITI/.NET/BlazorTodo/PlaygroundDotNet6/Components/AddNewTodo.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGROZXdUb2RvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ITI/.NET/BlazorTodo/PlaygroundDotNet6/Components/TodoList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUb2RvTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ITI/.NET/BlazorTodo/PlaygroundDotNet6/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

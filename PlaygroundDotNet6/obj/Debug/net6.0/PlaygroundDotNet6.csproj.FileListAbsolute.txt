@@ -145,3 +145,4 @@ D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\refint\PlaygroundDotNe
 D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\PlaygroundDotNet6.pdb
 D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\PlaygroundDotNet6.genruntimeconfig.cache
 D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\obj\Debug\net6.0\ref\PlaygroundDotNet6.dll
+D:\ITI\.NET\BlazorTodo\PlaygroundDotNet6\bin\Debug\net6.0\AKSoftware.Blazor.Utilities.dll

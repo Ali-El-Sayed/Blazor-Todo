@@ -1,0 +1,34 @@
+﻿
+<div style="border: 1px dashed dodgerblue; border-radius: 8px" class="p-3">
+	<h2 class="text-center">Add New Todo</h2>
+
+	<EditForm Model="@_willAddTodo">
+
+		<div class="m-3">
+			<label for="todoName" class="form-label">Todo</label>
+			<InputText type="text" class="form-control" id="todoName" @bind-Value="@_willAddTodo.Name" />
+		</div>
+
+
+		<button type="submit" class="btn btn-primary m-3" @onclick="OnAddNewTodo">Add New Todo</button>
+	</EditForm>
+</div>
+
+@code {
+	TodoContext _db = new();
+	Todo _willAddTodo = new();
+
+
+
+	void OnAddNewTodo()
+	{
+		if (_willAddTodo.Name == "") return;
+		_db.Todos.Add(_willAddTodo);
+		_db.SaveChanges();
+		if (_willAddTodo.Id == 0) return;
+		MessagingCenter.Send(this, "TodoAdded", _willAddTodo);
+		//_todos.Add(_willAddTodo);
+		_willAddTodo = new Todo();
+	}
+
+}

@@ -1,0 +1,96 @@
+﻿<div>
+
+	<table class="table">
+		<thead class="table-dark">
+			<tr class="table-light">
+				<th scope="col">ToDo Name</th>
+				<th scope="col">Status</th>
+				<th scope="col">Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+			@{
+				foreach (var item in _todos.OrderByDescending(t => t.IsDone))
+				{
+					@if (item.IsDone)
+					{
+						<tr class="table-success">
+
+							<td>@item.Name</td>
+							<td>
+								<button class="btn btn-success" @onclick="@(() => OnUndoButtonClicked(item))" type="button">Done</button>
+							</td>
+							<td>
+								<button class="btn btn-dark" @onclick="@(() => DeleteTodo(item))" type="button">Delete</button>
+							</td>
+						</tr>
+					}
+					else
+					{
+						<tr class="table-danger">
+
+							<td>@item.Name</td>
+
+							<td>
+								<button class="btn btn-danger" @onclick="@(() => OnDoneButtonClicked(item))" type="button">Undo</button>
+							</td>
+							<td>
+								<button class="btn btn-dark" @onclick="@(() => DeleteTodo(item))" type="button">Delete</button>
+							</td>
+						</tr>
+					}
+				}
+			}
+
+
+		</tbody>
+	</table>
+</div>
+
+@code {
+	List<Todo> _todos = new();
+	TodoContext _db = new();
+
+	protected override Task OnInitializedAsync()
+	{
+		_todos = _db.Todos.ToList();
+		MessagingCenter.Subscribe<AddNewTodo, Todo>(
+			this,
+			"TodoAdded", async (sender, todo) =>
+			{
+				_todos.Add(todo);
+				await InvokeAsync(StateHasChanged);
+			}
+			);
+		return base.OnInitializedAsync();
+	}
+
+	Todo OnDoneButtonClicked(Todo todo)
+	{
+		todo.IsDone = true;
+		UpdateTodo(todo);
+		return todo;
+	}
+
+	Todo OnUndoButtonClicked(Todo todo)
+	{
+		todo.IsDone = false;
+		UpdateTodo(todo);
+		return todo;
+	}
+
+
+	private void UpdateTodo(Todo todo)
+	{
+		_db.Todos.Update(todo);
+		_db.SaveChanges();
+	}
+
+	private void DeleteTodo(Todo todo)
+	{
+		_db.Todos.Remove(todo);
+		_db.SaveChanges();
+		_todos.Remove(todo);
+	}
+
+}
